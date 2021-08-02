@@ -10,7 +10,7 @@ function scrolltoend() {
 }
 
 function send(sender, receiver, message) {
-    $.post('/api/messages', '{"sender": "'+ sender +'", "receiver": "'+ receiver +'","message": "'+ message +'" }', function (data) {
+    $.post('/api/messages/', '{"sender": "'+ sender +'", "receiver": "'+ receiver +'","message": "'+ message +'" }', function (data) {
         console.log(data);
         var box = text_box.replace('{sender}', "You");
         box = box.replace('{message}', message);
